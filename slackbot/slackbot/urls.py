@@ -17,9 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
 from chatbot import views
+from chatbot.views import ChatterBotAppView
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', ChatterBotAppView.as_view(), name='main'),
     url(r'^chatbot/', include('chatbot.urls')),
     url(r'^chatterbot/', include('chatterbot.ext.django_chatterbot.urls', namespace='chatterbot')),
     url(r'^admin/', admin.site.urls),

@@ -80,7 +80,8 @@ CHATTERBOT = {
     'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
     'training_data': [
         'chatterbot.corpus.english.greetings'
-    ]
+    ],
+    'django_app_name': 'django_chatterbot'
 }
 
 WSGI_APPLICATION = 'slackbot.wsgi.application'
