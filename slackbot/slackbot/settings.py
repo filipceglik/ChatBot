@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'chatbot'
+    'chatbot',
+    'chatterbot.ext.django_chatterbot'
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,19 @@ TEMPLATES = [
         },
     },
 ]
+
+CHATTERBOT = {
+    'name': 'Dummy1',
+    'logic_adapters': [
+        'chatterbot.logic.MathematicalEvaluation',
+        'chatterbot.logic.TimeLogicAdapter',
+        'chatterbot.logic.BestMatch'
+    ],
+    'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
+    'training_data': [
+        'chatterbot.corpus.english.greetings'
+    ]
+}
 
 WSGI_APPLICATION = 'slackbot.wsgi.application'
 

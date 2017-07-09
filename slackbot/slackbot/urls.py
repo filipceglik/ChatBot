@@ -21,5 +21,6 @@ from chatbot import views
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^chatbot/', include('chatbot.urls')),
+    url(r'^chatterbot/', include('chatterbot.ext.django_chatterbot.urls', namespace='chatterbot')),
     url(r'^admin/', admin.site.urls),
 ]
