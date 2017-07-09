@@ -77,12 +77,13 @@ CHATTERBOT = {
         'chatterbot.logic.TimeLogicAdapter',
         'chatterbot.logic.BestMatch'
     ],
-    'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
+    'trainer': 'chatterbot.trainers.ListTrainer',
     'training_data': [
-        'chatterbot.corpus.english.greetings'
+        "Hello", "How are you?", "Fine", "Oh, that's great!"
     ],
     'django_app_name': 'django_chatterbot'
 }
+
 
 WSGI_APPLICATION = 'slackbot.wsgi.application'
 
